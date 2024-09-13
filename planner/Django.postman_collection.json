@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "5d0d9048-57db-4798-a7de-d0300c9097c4",
+		"name": "Django",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34529915",
+		"_collection_link": "https://curso5.postman.co/workspace/curso-Workspace~236afd28-8476-4b52-85bc-af299e24e7a0/collection/34529915-5d0d9048-57db-4798-a7de-d0300c9097c4?action=share&source=collection_link&creator=34529915"
+	},
+	"item": [
+		{
+			"name": "Academico",
+			"item": [
+				{
+					"name": "diciplina",
+					"item": [
+						{
+							"name": "criar diciplina",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Herbert\",\n    \"email\":\"herbert@mail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/academico/disciplina/"
+							},
+							"response": []
+						},
+						{
+							"name": "buscar diciplina",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/disciplina/"
+							},
+							"response": []
+						},
+						{
+							"name": "buscar diciplina por id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/disciplina/1"
+							},
+							"response": []
+						},
+						{
+							"name": "alterar diciplina",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Fulano\",\n    \"email\":\"fulano@mail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/academico/disciplina/1"
+							},
+							"response": []
+						},
+						{
+							"name": "deletar diciplina",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/disciplina/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "professor",
+					"item": [
+						{
+							"name": "criar professor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Fulano\",\n    \"email\":\"fulano@mail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/academico/professor"
+							},
+							"response": []
+						},
+						{
+							"name": "buscar professor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/professor"
+							},
+							"response": []
+						},
+						{
+							"name": "buscar professor por id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/professor/4"
+							},
+							"response": []
+						},
+						{
+							"name": "alterar professor",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Fulano\",\n    \"email\":\"fulano@mail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/academico/professor/1"
+							},
+							"response": []
+						},
+						{
+							"name": "deletar professor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/professor/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "curso",
+					"item": [
+						{
+							"name": "criar curso",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Biologia\",\n    \"sigla\":\"BIO\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/academico/curso/"
+							},
+							"response": []
+						},
+						{
+							"name": "buscar curso",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/academico/curso/"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
