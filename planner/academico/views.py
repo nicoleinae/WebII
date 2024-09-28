@@ -3,8 +3,10 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 
+
+#importando modelos e serializers
 from .models import Professor, Curso, Disciplina
-from .serializers import ProfessorSerializer, CursoSerializer, DisciplinaSerializer, DisciplinaCreateUpdateSerializer
+from .serializers import ProfessorSerializer, CursoSerializer, DisciplinaSerializer, DisciplinaCreateUpdateSerializer, DisciplinaConteudoCreateUpdateSerializer
 
 class ProfessorView(APIView):
 
@@ -31,9 +33,10 @@ class ProfessorView(APIView):
 
 
 class ProfessorReadUpdateDeleteView(APIView):
- 
+    
     def get(self, request, pk):
         professor = get_object_or_404(Professor, pk=pk)
+
         serializer = ProfessorSerializer(professor)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -109,3 +112,12 @@ class DisciplinaRetrieveUpdateDestroyAPIView(APIView):
         
         disciplina.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
+class DisciplinaConteudoCreateView(APIView):
+    def post(self, request, *args, **kwargs):
+        serializer = DisciplinaConteudoCreateUpdateSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
